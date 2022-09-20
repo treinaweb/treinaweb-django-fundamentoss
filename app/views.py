@@ -6,4 +6,4 @@ import datetime
 
 def horario_atual(request):
     horario_atual = datetime.datetime.now()
-    return HttpResponse(horario_atual)
+    return render(request, 'lista_horario.html', context={'horario': horario_atual})
