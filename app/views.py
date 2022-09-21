@@ -13,6 +13,7 @@ def form_cliente(request):
     if request.method == "POST":
         form = ClienteForm(request.POST)
         if form.is_valid():
+            form.save()
             return HttpResponseRedirect('horario_atual')
     form = ClienteForm()
     return render(request, 'form_cliente.html', context={'form': form})

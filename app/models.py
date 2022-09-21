@@ -7,3 +7,4 @@ class Cliente(models.Model):
     idade = models.IntegerField(null=False, blank=True)
     data_nascimento = models.DateField(null=False, blank=False)
     is_ativo = models.BooleanField(null=False, default=True)
+    outro_campo = models.BooleanField(default=False)
